@@ -15,4 +15,4 @@ jobs:
         with:
           owner: llvm
           base: master
-          head: master
+          head: upstream
