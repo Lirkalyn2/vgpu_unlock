@@ -7,12 +7,8 @@ on:
 
 jobs:
   sync:
-
     runs-on: ubuntu-latest
-
     steps:
-      - uses: tgymnich/fork-sync@v1.4
-        with:
-          owner: llvm
-          base: master
-          head: upstream
+    - name: Merge
+      shell: bash
+      run: git fetch upstream && git checkout master && git merge upstream/main && git pull upstream master && git push
